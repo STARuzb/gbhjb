@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <script>
+        fetch('https://api.example.com/data')
+            .then(response => response.json())
+            .then(data => {
+                const dataContainer = document.getElementById('data-container');
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white p-4 shadow-md';
+                    card.innerHTML = `
+                        <h2 class="text-lg font-semibold">${item.title}</h2>
+                        <p class="text-gray-600">${item.description}</p>
+                    `;
+                    dataContainer.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Malumotlar yuklanishda xatolik:', error);
+            });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // axios.get('https://api.example.com/data')
+            then(function (response) {
+                let dataContainer = document.getElementById('data-container');
+                response.data.forEach(function (item) {
+                    let card = document.createElement('div');
+                    card.className = 'bg-white p-4 shadow-md';
+                    card.innerHTML = `
+                        <h2 class="text-lg font-semibold">${item.title}</h2>
+                        <p class="text-gray-600">${item.description}</p>
+                    `;
+                    dataContainer.appendChild(card);
+                });
+            })
+            .catch(function (error) {
+                console.log('Ma\'lumotlar yuklanishda xatolik:', error);
+            });
+    </script>
+</body>
+</html>
